@@ -221,6 +221,7 @@
             this.btnBooks.TabIndex = 2;
             this.btnBooks.Text = "Books";
             this.btnBooks.TextOffsetX = 5;
+            this.btnBooks.Click += new System.EventHandler(this.BtnBooks_Click);
             // 
             // btnTransaction
             // 
@@ -435,6 +436,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1022, 603);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.label1);

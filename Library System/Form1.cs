@@ -23,5 +23,15 @@ namespace Library_System
             cn = new SqlConnection(dbcon.MyConnection());
 
         }
+
+        private void BtnBooks_Click(object sender, EventArgs e)
+        {
+            frmBookList frm = new frmBookList();
+            frm.TopLevel = false;
+            panel3.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
+            
+        }
     }
 }
