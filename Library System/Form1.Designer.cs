@@ -38,7 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBooks = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnTransaction = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnMembers = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnStudents = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBills = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnUsers = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnLogout = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -136,7 +136,7 @@
             this.panel2.Controls.Add(this.btnUsers);
             this.panel2.Controls.Add(this.btnBills);
             this.panel2.Controls.Add(this.btnTransaction);
-            this.panel2.Controls.Add(this.btnMembers);
+            this.panel2.Controls.Add(this.btnStudents);
             this.panel2.Controls.Add(this.btnBooks);
             this.panel2.Controls.Add(this.btnDashboard);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -255,38 +255,38 @@
             this.btnTransaction.Text = "Issue Books";
             this.btnTransaction.TextOffsetX = 5;
             // 
-            // btnMembers
+            // btnStudents
             // 
-            this.btnMembers.AnimationHoverSpeed = 0.07F;
-            this.btnMembers.AnimationSpeed = 0.03F;
-            this.btnMembers.BaseColor = System.Drawing.Color.Transparent;
-            this.btnMembers.BorderColor = System.Drawing.Color.Black;
-            this.btnMembers.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnMembers.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnMembers.CheckedForeColor = System.Drawing.Color.White;
-            this.btnMembers.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnMembers.CheckedImage")));
-            this.btnMembers.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnMembers.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnMembers.FocusedColor = System.Drawing.Color.Empty;
-            this.btnMembers.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMembers.ForeColor = System.Drawing.Color.White;
-            this.btnMembers.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Image")));
-            this.btnMembers.ImageOffsetX = 20;
-            this.btnMembers.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnMembers.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnMembers.Location = new System.Drawing.Point(0, 287);
-            this.btnMembers.Name = "btnMembers";
-            this.btnMembers.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
-            this.btnMembers.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnMembers.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnMembers.OnHoverImage = null;
-            this.btnMembers.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnMembers.OnPressedColor = System.Drawing.Color.Black;
-            this.btnMembers.OnPressedDepth = 0;
-            this.btnMembers.Size = new System.Drawing.Size(234, 45);
-            this.btnMembers.TabIndex = 3;
-            this.btnMembers.Text = "Members";
-            this.btnMembers.TextOffsetX = 5;
+            this.btnStudents.AnimationHoverSpeed = 0.07F;
+            this.btnStudents.AnimationSpeed = 0.03F;
+            this.btnStudents.BaseColor = System.Drawing.Color.Transparent;
+            this.btnStudents.BorderColor = System.Drawing.Color.Black;
+            this.btnStudents.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnStudents.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnStudents.CheckedForeColor = System.Drawing.Color.White;
+            this.btnStudents.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnStudents.CheckedImage")));
+            this.btnStudents.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnStudents.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnStudents.FocusedColor = System.Drawing.Color.Empty;
+            this.btnStudents.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudents.ForeColor = System.Drawing.Color.White;
+            this.btnStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnStudents.Image")));
+            this.btnStudents.ImageOffsetX = 20;
+            this.btnStudents.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnStudents.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnStudents.Location = new System.Drawing.Point(0, 287);
+            this.btnStudents.Name = "btnStudents";
+            this.btnStudents.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
+            this.btnStudents.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnStudents.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnStudents.OnHoverImage = null;
+            this.btnStudents.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnStudents.OnPressedColor = System.Drawing.Color.Black;
+            this.btnStudents.OnPressedDepth = 0;
+            this.btnStudents.Size = new System.Drawing.Size(234, 45);
+            this.btnStudents.TabIndex = 3;
+            this.btnStudents.Text = "Students";
+            this.btnStudents.TextOffsetX = 5;
             // 
             // btnBills
             // 
@@ -466,7 +466,7 @@
         private Guna.UI.WinForms.GunaAdvenceButton btnDashboard;
         private Guna.UI.WinForms.GunaAdvenceButton btnBills;
         private Guna.UI.WinForms.GunaAdvenceButton btnTransaction;
-        private Guna.UI.WinForms.GunaAdvenceButton btnMembers;
+        private Guna.UI.WinForms.GunaAdvenceButton btnStudents;
         private Guna.UI.WinForms.GunaAdvenceButton btnBooks;
         private Guna.UI.WinForms.GunaAdvenceButton btnUsers;
         private Guna.UI.WinForms.GunaAdvenceButton btnLogout;
