@@ -7,14 +7,83 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Library_System
 {
     public partial class frmBookList : Form
     {
+        SqlConnection cn = new SqlConnection();
+        SqlCommand cm = new SqlCommand();
+        SqlDataReader dr;
+        DBConnection dbcon = new DBConnection();
+        string stitle = "Library Management System";
         public frmBookList()
         {
             InitializeComponent();
+            cn = new SqlConnection(dbcon.MyConnection());
+            LoadRecords();
+        }
+
+        public void LoadRecords()
+        {
+            int i = 0;
+            gunaDataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("SELECT * FROM tblBook WHERE bkTitle LIKE '" + txtSearch.Text + "%'", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                i += 1;
+                gunaDataGridView1.Rows.Add(i, dr["bookID"].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString());
+            }
+            dr.Close();
+            cn.Close();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            frmBook frm = new frmBook(this);
+            frm.btnUpdate.Enabled = false;
+            frm.Show();
+        }
+
+        private void GunaDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = gunaDataGridView1.Columns[e.ColumnIndex].Name;
+            if (colName == "Edit")
+            {
+                frmBook frm = new frmBook(this);
+                frm.btnSave.Enabled = false;
+                frm.lblID.Text = gunaDataGridView1[1, e.RowIndex].Value.ToString();
+                frm.txtBookTitle.Text = gunaDataGridView1[2, e.RowIndex].Value.ToString();
+                frm.txtEdition.Text = gunaDataGridView1[3, e.RowIndex].Value.ToString();
+                frm.txtGenre.Text = gunaDataGridView1[4, e.RowIndex].Value.ToString();
+                frm.txtAuthor.Text = gunaDataGridView1[5, e.RowIndex].Value.ToString();
+                frm.txtPublisher.Text = gunaDataGridView1[6, e.RowIndex].Value.ToString();
+                frm.txtYear.Text = gunaDataGridView1[7, e.RowIndex].Value.ToString();
+                frm.txtISBN.Text = gunaDataGridView1[8, e.RowIndex].Value.ToString();
+                frm.txtCopies.Text = gunaDataGridView1[9, e.RowIndex].Value.ToString();
+                frm.ShowDialog();
+            }
+            else if (colName == "Delete")
+            {
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cn.Open();
+                    cm = new SqlCommand("DELETE FROM tblBook WHERE bookID like '" + gunaDataGridView1[1, e.RowIndex].Value.ToString() + "'", cn);
+                    cm.ExecuteNonQuery();
+
+                    cn.Close();
+                    MessageBox.Show("Record has been successfully deleted!", stitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadRecords();
+                }
+            }
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

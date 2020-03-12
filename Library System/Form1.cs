@@ -24,6 +24,11 @@ namespace Library_System
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
+        }
+
         private void BtnBooks_Click(object sender, EventArgs e)
         {
             frmBookList frm = new frmBookList();
@@ -32,6 +37,21 @@ namespace Library_System
             frm.BringToFront();
             frm.Show();
             
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BtnMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
