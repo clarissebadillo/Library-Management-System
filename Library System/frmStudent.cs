@@ -43,6 +43,7 @@ namespace Library_System
             txtEmail.Text = "";
             txtAddress.Text = "";
             txtStudentNo.Focus();
+            txtStudentNo.Select();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -78,6 +79,38 @@ namespace Library_System
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this record?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cn.Open();
+                    cm = new SqlCommand("UPDATE tblStudent SET stNumber = @stNumber, stLname = @stLname, stFname = @stFname, stInitial = @stInitial, stCourse = @stCourse, stYear = @stYear, stGender = @stGender, stContact = @stContact, stEmail = @stEmail, stAddress = @stAddress WHERE studID LIKE '" + lblID.Text + "'", cn);
+                    cm.Parameters.AddWithValue("@stNumber", txtStudentNo.Text);
+                    cm.Parameters.AddWithValue("@stLname", txtLname.Text);
+                    cm.Parameters.AddWithValue("@stFname", txtFname.Text);
+                    cm.Parameters.AddWithValue("@stInitial", txtMi.Text);
+                    cm.Parameters.AddWithValue("@stCourse", cboCourse.Text);
+                    cm.Parameters.AddWithValue("@stYear", cboYear.Text);
+                    cm.Parameters.AddWithValue("@stGender", cboGender.Text);
+                    cm.Parameters.AddWithValue("@stContact", txtContact.Text);
+                    cm.Parameters.AddWithValue("@stEmail", txtEmail.Text);
+                    cm.Parameters.AddWithValue("@stAddress", txtAddress.Text);
+                    cm.ExecuteNonQuery();
+
+                    cn.Close();
+                    MessageBox.Show("Record has been successfully updated!");
+                    Clear();
+                    frmlist.LoadRecords();
+                    this.Close();
+                }
+            }
+            catch (Exception)
+            {
             }
         }
     }

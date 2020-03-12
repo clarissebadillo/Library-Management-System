@@ -99,7 +99,7 @@ namespace Library_System
                     MessageBox.Show("Record has been successfully updated!");
                     Clear();
                     frmlist.LoadRecords();
-                    this.Dispose();
+                    this.Close();
                 }
             }
             catch (Exception)

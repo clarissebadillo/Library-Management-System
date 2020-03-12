@@ -31,7 +31,7 @@ namespace Library_System
             int i = 0;
             gunaDataGridView1.Rows.Clear();
             cn.Open();
-            cm = new SqlCommand("SELECT * FROM tblStudent WHERE stNumber LIKE '" + txtSearch.Text + "%'", cn);
+            cm = new SqlCommand("SELECT * FROM tblStudent WHERE stLname LIKE '" + txtSearch.Text + "%'", cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
@@ -45,6 +45,7 @@ namespace Library_System
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             frmStudent frm = new frmStudent(this);
+            frm.btnUpdate.Enabled = false;
             frm.Show();
         }
 
@@ -73,7 +74,7 @@ namespace Library_System
                 if (MessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand("DELETE FROM tblStudent WHERE stNumber like '" + gunaDataGridView1[1, e.RowIndex].Value.ToString() + "'", cn);
+                    cm = new SqlCommand("DELETE FROM tblStudent WHERE studID like '" + gunaDataGridView1[1, e.RowIndex].Value.ToString() + "'", cn);
                     cm.ExecuteNonQuery();
 
                     cn.Close();
