@@ -54,19 +54,13 @@ namespace Library_System
             
         }
 
-        private void BtnClose_Click(object sender, EventArgs e)
+        private void BtnStudents_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void BtnMin_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void BtnMax_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
+            frmStudentList frm = new frmStudentList();
+            frm.TopLevel = false;
+            panel3.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
         }
 
     }

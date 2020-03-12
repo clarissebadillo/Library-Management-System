@@ -72,6 +72,7 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLogout.AnimationHoverSpeed = 0.07F;
             this.btnLogout.AnimationSpeed = 0.03F;
             this.btnLogout.BaseColor = System.Drawing.Color.Transparent;
@@ -234,6 +235,7 @@
             this.btnStudents.TabIndex = 3;
             this.btnStudents.Text = "Students";
             this.btnStudents.TextOffsetX = 5;
+            this.btnStudents.Click += new System.EventHandler(this.BtnStudents_Click);
             // 
             // btnBooks
             // 
@@ -365,13 +367,13 @@
             this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.IconSize = 10F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1039, 8);
+            this.gunaControlBox1.IconSize = 8F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(1034, 0);
             this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(20, 20);
+            this.gunaControlBox1.Size = new System.Drawing.Size(30, 37);
             this.gunaControlBox1.TabIndex = 12;
             // 
             // gunaControlBox2
@@ -381,13 +383,13 @@
             this.gunaControlBox2.AnimationSpeed = 0.03F;
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.White;
-            this.gunaControlBox2.IconSize = 10F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(1013, 8);
+            this.gunaControlBox2.IconSize = 8F;
+            this.gunaControlBox2.Location = new System.Drawing.Point(1000, 0);
             this.gunaControlBox2.Name = "gunaControlBox2";
-            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
+            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(20, 20);
+            this.gunaControlBox2.Size = new System.Drawing.Size(30, 37);
             this.gunaControlBox2.TabIndex = 13;
             // 
             // gunaControlBox3
@@ -398,12 +400,12 @@
             this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.gunaControlBox3.IconColor = System.Drawing.Color.White;
             this.gunaControlBox3.IconSize = 10F;
-            this.gunaControlBox3.Location = new System.Drawing.Point(987, 8);
+            this.gunaControlBox3.Location = new System.Drawing.Point(966, 0);
             this.gunaControlBox3.Name = "gunaControlBox3";
-            this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
+            this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox3.Size = new System.Drawing.Size(20, 20);
+            this.gunaControlBox3.Size = new System.Drawing.Size(30, 37);
             this.gunaControlBox3.TabIndex = 14;
             // 
             // panel1
