@@ -122,6 +122,7 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.TabStop = false;
             this.btnExit.Zoom = 10;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // btnAdd
             // 
@@ -136,6 +137,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.TabStop = false;
             this.btnAdd.Zoom = 10;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // label1
             // 
@@ -234,6 +236,7 @@
             this.gunaDataGridView1.ThemeStyle.RowsStyle.Height = 25;
             this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(83)))), ((int)(((byte)(120)))));
             this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GunaDataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -245,11 +248,10 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Student ID";
+            this.Column2.HeaderText = "#";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            this.Column2.Width = 97;
+            this.Column2.Width = 39;
             // 
             // Column11
             // 
