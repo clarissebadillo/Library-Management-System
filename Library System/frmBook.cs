@@ -15,7 +15,6 @@ namespace Library_System
     {
         SqlConnection cn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
-        SqlDataReader dr;
         DBConnection dbcon = new DBConnection();
         frmBookList frmlist;
 

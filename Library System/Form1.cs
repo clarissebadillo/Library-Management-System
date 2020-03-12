@@ -27,6 +27,21 @@ namespace Library_System
         private void Form1_Load(object sender, EventArgs e)
         {
             Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
+
+            //date and time
+            timer1.Start();
+            lblDate.Text = DateTime.Now.ToLongDateString();
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+
+            //Maximize form
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
         }
 
         private void BtnBooks_Click(object sender, EventArgs e)
@@ -53,5 +68,6 @@ namespace Library_System
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
     }
 }

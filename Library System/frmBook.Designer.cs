@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBook));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtISBN = new Guna.UI.WinForms.GunaTextBox();
@@ -56,47 +56,46 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
+            this.panel1.Controls.Add(this.gunaControlBox1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.bunifuImageButton2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(651, 40);
+            this.panel1.Size = new System.Drawing.Size(651, 36);
             this.panel1.TabIndex = 2;
+            // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(617, 4);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(26, 29);
+            this.gunaControlBox1.TabIndex = 7;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(621, 11);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 5;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.BunifuImageButton2_Click);
             // 
             // label1
             // 
@@ -104,7 +103,7 @@
             this.label1.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(44, 12);
+            this.label1.Location = new System.Drawing.Point(44, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 4;
@@ -132,7 +131,7 @@
             this.txtISBN.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.txtISBN.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtISBN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtISBN.Location = new System.Drawing.Point(34, 237);
+            this.txtISBN.Location = new System.Drawing.Point(34, 231);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.PasswordChar = '\0';
             this.txtISBN.Size = new System.Drawing.Size(279, 26);
@@ -143,7 +142,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.label9.Location = new System.Drawing.Point(34, 219);
+            this.label9.Location = new System.Drawing.Point(34, 213);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 15);
             this.label9.TabIndex = 113;
@@ -158,7 +157,7 @@
             this.txtYear.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.txtYear.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtYear.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtYear.Location = new System.Drawing.Point(334, 187);
+            this.txtYear.Location = new System.Drawing.Point(334, 181);
             this.txtYear.Name = "txtYear";
             this.txtYear.PasswordChar = '\0';
             this.txtYear.Size = new System.Drawing.Size(279, 26);
@@ -169,7 +168,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.label10.Location = new System.Drawing.Point(334, 169);
+            this.label10.Location = new System.Drawing.Point(334, 163);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 15);
             this.label10.TabIndex = 111;
@@ -184,7 +183,7 @@
             this.txtPublisher.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.txtPublisher.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtPublisher.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPublisher.Location = new System.Drawing.Point(34, 187);
+            this.txtPublisher.Location = new System.Drawing.Point(34, 181);
             this.txtPublisher.Name = "txtPublisher";
             this.txtPublisher.PasswordChar = '\0';
             this.txtPublisher.Size = new System.Drawing.Size(279, 26);
@@ -195,7 +194,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.label11.Location = new System.Drawing.Point(34, 169);
+            this.label11.Location = new System.Drawing.Point(34, 163);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 15);
             this.label11.TabIndex = 109;
@@ -220,7 +219,7 @@
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageSize = new System.Drawing.Size(16, 16);
             this.btnCancel.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnCancel.Location = new System.Drawing.Point(528, 294);
+            this.btnCancel.Location = new System.Drawing.Point(528, 288);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -252,7 +251,7 @@
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageSize = new System.Drawing.Size(18, 18);
             this.btnUpdate.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdate.Location = new System.Drawing.Point(428, 294);
+            this.btnUpdate.Location = new System.Drawing.Point(428, 288);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(83)))), ((int)(((byte)(120)))));
             this.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -285,7 +284,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageSize = new System.Drawing.Size(18, 18);
             this.btnSave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSave.Location = new System.Drawing.Point(328, 294);
+            this.btnSave.Location = new System.Drawing.Point(328, 288);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(83)))), ((int)(((byte)(120)))));
             this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -308,7 +307,7 @@
             this.txtAuthor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.txtAuthor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtAuthor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAuthor.Location = new System.Drawing.Point(334, 137);
+            this.txtAuthor.Location = new System.Drawing.Point(334, 131);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.PasswordChar = '\0';
             this.txtAuthor.Size = new System.Drawing.Size(279, 26);
@@ -319,7 +318,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.label8.Location = new System.Drawing.Point(334, 119);
+            this.label8.Location = new System.Drawing.Point(334, 113);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 15);
             this.label8.TabIndex = 104;
@@ -334,7 +333,7 @@
             this.txtGenre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.txtGenre.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtGenre.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtGenre.Location = new System.Drawing.Point(34, 137);
+            this.txtGenre.Location = new System.Drawing.Point(34, 131);
             this.txtGenre.Name = "txtGenre";
             this.txtGenre.PasswordChar = '\0';
             this.txtGenre.Size = new System.Drawing.Size(279, 26);
@@ -345,7 +344,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.label7.Location = new System.Drawing.Point(34, 119);
+            this.label7.Location = new System.Drawing.Point(34, 113);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 15);
             this.label7.TabIndex = 102;
@@ -360,7 +359,7 @@
             this.txtEdition.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.txtEdition.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtEdition.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEdition.Location = new System.Drawing.Point(334, 87);
+            this.txtEdition.Location = new System.Drawing.Point(334, 81);
             this.txtEdition.Name = "txtEdition";
             this.txtEdition.PasswordChar = '\0';
             this.txtEdition.Size = new System.Drawing.Size(279, 26);
@@ -371,7 +370,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.label12.Location = new System.Drawing.Point(334, 69);
+            this.label12.Location = new System.Drawing.Point(334, 63);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(47, 15);
             this.label12.TabIndex = 100;
@@ -386,7 +385,7 @@
             this.txtBookTitle.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.txtBookTitle.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtBookTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBookTitle.Location = new System.Drawing.Point(34, 87);
+            this.txtBookTitle.Location = new System.Drawing.Point(34, 81);
             this.txtBookTitle.Name = "txtBookTitle";
             this.txtBookTitle.PasswordChar = '\0';
             this.txtBookTitle.Size = new System.Drawing.Size(279, 26);
@@ -395,7 +394,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(619, 322);
+            this.lblID.Location = new System.Drawing.Point(619, 316);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(0, 13);
             this.lblID.TabIndex = 98;
@@ -406,7 +405,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.label14.Location = new System.Drawing.Point(34, 69);
+            this.label14.Location = new System.Drawing.Point(34, 63);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(66, 15);
             this.label14.TabIndex = 97;
@@ -421,7 +420,7 @@
             this.txtCopies.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.txtCopies.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtCopies.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCopies.Location = new System.Drawing.Point(334, 237);
+            this.txtCopies.Location = new System.Drawing.Point(334, 231);
             this.txtCopies.Name = "txtCopies";
             this.txtCopies.PasswordChar = '\0';
             this.txtCopies.Size = new System.Drawing.Size(279, 26);
@@ -432,7 +431,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.label2.Location = new System.Drawing.Point(334, 219);
+            this.label2.Location = new System.Drawing.Point(334, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 115;
@@ -443,7 +442,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(651, 358);
+            this.ClientSize = new System.Drawing.Size(651, 343);
             this.ControlBox = false;
             this.Controls.Add(this.txtCopies);
             this.Controls.Add(this.label2);
@@ -473,7 +472,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -484,7 +482,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
         public Guna.UI.WinForms.GunaTextBox txtISBN;
@@ -507,5 +504,6 @@
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.Label label2;
+        private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
     }
 }
